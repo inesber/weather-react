@@ -1,22 +1,82 @@
-.App {
+h1 {
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+  padding: 10px;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.weather-app {
+  border: 1px solid #dadde1;
+  margin: 60px auto;
+  max-width: 700px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.weather-icon {
+  display: block;
+  margin: 0 auto;
+  height: 170px;
+  width: 170px;
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.weather-quote {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Satisfy", cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.current-temperature {
+  text-align: center;
+  font-size: 80px;
+  font-family: "Varela Round", sans-serif;
 }
 
-.App-link {
-  color: #09d3ac;
+li {
+  list-style: none;
+  font-family: "Varela Round", sans-serif;
+}
+
+.day-and-time li {
+  padding: 5px;
+  font-size: 20px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.wind-and-precipitation {
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.wind-and-precipitation li {
+  font-size: 12px;
+}
+
+.search-bar {
+  width: 75%;
+  border-radius: 5px;
+  margin: 30px 10px 0;
+}
+
+.prediction-icon {
+  padding: 24px;
+  font-size: 40px;
+  color: #c5c5c5;
+}
+
+.prediction-text {
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  padding: 7px;
 }
