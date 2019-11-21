@@ -7,6 +7,10 @@ function App() {
       <header className="App-header">
         <h1>Hello </h1>
       </header>
+      <a href="https://github.com/inesber/weather-react" target="_blank">
+        Open-Source Code
+      </a>{" "}
+      by Inês Bernardino
     </div>
   );
 }
