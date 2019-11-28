@@ -5,10 +5,15 @@ import Loader from "react-loader-spinner";
 
 export default function App() {
   const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
     console.log(response.data);
-    setTemperature(response.data.main.temp);
+    setWeatherData({
+      temperature: response.data.main.temp,
+      wind: 12,
+      city: response.data.name
+    });
+
     setReady(true);
   }
 
@@ -20,7 +25,7 @@ export default function App() {
             <div className="weather-app">
               <div className="row">
                 <div className="col-12">
-                  <h1 className="current-city">Lisbon</h1>
+                  <h1 className="current-city">{weatherData.city}</h1>
                   <div className="row">
                     <div className="col-6">
                       <img
@@ -32,7 +37,7 @@ export default function App() {
 
                     <div className="col-6">
                       <div className="current-temperature">
-                        {Math.round(temperature)}
+                        {Math.round(weatherData.temperature)}
                       </div>
                       <ul className="day-and-time">
                         <li className="date">20 November 2019</li>
