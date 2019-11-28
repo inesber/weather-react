@@ -4,20 +4,21 @@ import "./App.css";
 import Loader from "react-loader-spinner";
 
 export default function App() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
+      ready: true,
       temperature: response.data.main.temp,
-      wind: 12,
-      city: response.data.name
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      city: response.data.name,
+      icon: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      description: response.data.weather[0].description
     });
-
-    setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="App">
         <div className="container">
@@ -30,9 +31,12 @@ export default function App() {
                     <div className="col-6">
                       <img
                         className="weather-icon"
-                        src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                        src={weatherData.icon}
+                        alt={weatherData.description}
                       />
-                      <p className="weather-quote">Cloudy</p>
+                      <p className="weather-quote text-capitalize">
+                        {weatherData.description}
+                      </p>
                     </div>
 
                     <div className="col-6">
@@ -47,11 +51,11 @@ export default function App() {
                         <ul>
                           <li>
                             Wind:
-                            <span id="wind">18</span> km/h
+                            <span id="wind">{weatherData.wind}</span> km/h
                           </li>
                           <li>
                             Humidity:
-                            <span id="humidity">0</span>%
+                            <span id="humidity">{weatherData.humidity}</span>%
                           </li>
                         </ul>
                       </div>
