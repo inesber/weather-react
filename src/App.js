@@ -1,8 +1,14 @@
 import React from "react";
+import axios from "axios";
 import "./App.css";
 import Loader from "react-loader-spinner";
 
-function App() {
+export default function App() {
+  const apiKey = "0c7738f69f93f7a10985af2c2d89420a";
+  let city = "lisbon";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(handleResponse);
+
   let weatherData = {
     iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
     temperature: "15ºC",
@@ -77,5 +83,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
