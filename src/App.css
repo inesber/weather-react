@@ -9,7 +9,7 @@ h1 {
 .weather-app {
   border: 1px solid #dadde1;
   margin: 60px auto;
-  max-width: 700px;
+  max-width: 500px;
   padding: 10px;
   border-radius: 20px;
 }
