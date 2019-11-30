@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import FormatHour from "./FormatHour";
+import FormatDate from "./FormatDate";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -10,6 +12,8 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
+      hour: new Date(response.data.dt * 1000),
       icon: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       description: response.data.weather[0].description
     });
@@ -41,8 +45,13 @@ export default function Weather(props) {
                       <span className="unit">ºC</span>
                     </div>
                     <ul className="day-and-time">
-                      <li className="date">20 November 2019</li>
-                      <li className="hours">Wednesday, 21:55</li>
+                      <li className="date">
+                        <FormatDate date={weatherData.date}></FormatDate>
+                      </li>
+                      <li className="hours">
+                        {" "}
+                        <FormatHour hour={weatherData.hour}></FormatHour>
+                      </li>
                     </ul>
                     <div className="wind-and-precipitation">
                       <ul>
