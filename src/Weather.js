@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -39,6 +38,7 @@ export default function Weather() {
                   <div className="col-6">
                     <div className="current-temperature">
                       {Math.round(weatherData.temperature)}
+                      <span className="unit">ºC</span>
                     </div>
                     <ul className="day-and-time">
                       <li className="date">20 November 2019</li>
@@ -63,7 +63,7 @@ export default function Weather() {
                       autocomplete="off"
                       class="search-bar"
                       id="search-input"
-                    />
+                    />{" "}
                     <input
                       type="submit"
                       placeholder="search"
@@ -79,8 +79,8 @@ export default function Weather() {
     );
   } else {
     const apiKey = "e54c84c12b5edaf88f0fd0625ac73988";
-    let city = "Lisbon";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}&units=metric`;
+
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
