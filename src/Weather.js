@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormatHour from "./FormatHour";
 import FormatDate from "./FormatDate";
+import SearchEngine from "./SearchEngine";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -65,20 +66,9 @@ export default function Weather(props) {
                       </ul>
                     </div>
                   </div>
-                  <form>
-                    <input
-                      type="search"
-                      placeholder="Type a city..."
-                      autocomplete="off"
-                      class="search-bar"
-                      id="search-input"
-                    />{" "}
-                    <input
-                      type="submit"
-                      placeholder="search"
-                      class="btn btn-outline-primary"
-                    />
-                  </form>
+                  <div>
+                    <SearchEngine></SearchEngine>
+                  </div>
                 </div>
               </div>
             </div>
