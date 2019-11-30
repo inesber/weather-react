@@ -30,9 +30,16 @@ h1 {
 }
 
 .current-temperature {
-  text-align: center;
   font-size: 80px;
   font-family: "Varela Round", sans-serif;
+  margin: 0 0 0 50px;
+}
+
+.unit {
+  font-size: 20px;
+  position: relative;
+  top: -50px;
+  left: -15px;
 }
 
 li {

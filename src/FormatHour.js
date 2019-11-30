@@ -19,6 +19,6 @@ export default function FormatHour(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let month = props.hour.getMonth();
+
   return `${day}, ${hours}:${minutes}`;
 }
