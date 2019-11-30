@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -16,7 +16,7 @@ export default function Weather(props) {
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       hour: new Date(response.data.dt * 1000),
-      icon: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description
     });
   }
@@ -42,6 +42,7 @@ export default function Weather(props) {
         <div className="container">
           <div className="weather-app">
             <WeatherInfo data={weatherData} />
+            <Forecast city={weatherData.city} />
             <div>
               <form onSubmit={handleSubmit}>
                 <input

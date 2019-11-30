@@ -1,0 +1,15 @@
+.Forecast {
+  text-align: center;
+  font-size: 11px;
+  margin-top: 20px;
+  color: rgb(135, 135, 135);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.Forecast canvas {
+  display: block;
+  width: 40px;
+  text-align: center;
+  opacity: 1;
+}

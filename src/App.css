@@ -17,10 +17,8 @@ h1 {
 .weather-icon {
   display: block;
   margin: 0 auto;
-  height: 170px;
-  width: 170px;
-  padding: 10px;
   text-align: center;
+  font-size: 100px;
 }
 
 .weather-quote {
