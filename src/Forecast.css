@@ -1,10 +1,10 @@
 .Forecast {
   text-align: center;
   font-size: 11px;
-  margin-top: 20px;
   color: rgb(135, 135, 135);
   font-weight: 400;
   font-size: 14px;
+  margin-left: 120px;
 }
 
 .Forecast canvas {

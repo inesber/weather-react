@@ -15,7 +15,7 @@ export default function FormatDate(props) {
     "November",
     "December"
   ];
-  let day = props.date.getDay();
+  let day = props.date.getDate();
   let month = months[props.date.getMonth()];
   let year = props.date.getFullYear();
   return `${day} ${month} ${year}`;
