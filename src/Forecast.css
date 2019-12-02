@@ -4,12 +4,11 @@
   color: rgb(135, 135, 135);
   font-weight: 400;
   font-size: 14px;
-  margin-left: 120px;
 }
 
 .Forecast canvas {
   display: block;
-  width: 40px;
+  width: 70px;
   text-align: center;
   opacity: 1;
 }
