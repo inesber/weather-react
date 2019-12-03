@@ -27,7 +27,7 @@ export default function Forecast(props) {
   if (loaded && forecast.city.name === props.city) {
     return (
       <div className="ForecastHeader">
-        <p>In the next hours:</p>
+        <p>In the next hours</p>
         <div className="Forecast row">
           {forecast.list.slice(0, 5).map(function(weather) {
             return (

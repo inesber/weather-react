@@ -1,44 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 h1 {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   padding: 10px;
   font-size: 50px;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #ffffff;
 }
 
 .weather-app {
   border: 1px solid #dadde1;
-  margin: 25px auto;
-  max-width: 450px;
+  margin: 20px auto;
+  max-width: 500px;
   padding: 10px;
   border-radius: 20px;
   background: linear-gradient(
     0deg,
-    rgba(255, 255, 255, 0.5270483193277311) 0%,
-    rgba(116, 198, 241, 1) 100%
+    rgba(186, 192, 195, 1) 0%,
+    rgba(14, 71, 102, 1) 71%
   );
 }
 
 .weather-icon {
-  display: block;
-  margin: 0 auto;
   text-align: center;
-  font-size: 100px;
 }
 
 .weather-quote {
   text-align: center;
   font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .WeatherTemperature {
   text-align: right;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 10px 0 0;
 }
 
 .current-temperature {
   font-size: 80px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .unit {
@@ -46,23 +59,33 @@ h1 {
   position: relative;
   top: -50px;
   left: -15px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
+ul {
+  padding: 0px;
+}
 li {
   list-style: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .day-and-time li {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
 }
 
 .wind-and-precipitation {
   padding: 10px;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 15px 0 0;
 }
 
 .wind-and-precipitation li {
@@ -79,12 +102,6 @@ form {
   margin: 30px 10px 0;
 }
 
-.prediction-icon {
-  padding: 24px;
-  font-size: 40px;
-  color: #c5c5c5;
-}
-
 .prediction-text {
   font-family: "Varela Round", sans-serif;
   font-size: 20px;
@@ -97,5 +114,9 @@ p {
 
 footer {
   text-align: center;
-  margin: 20px;
+  margin: 10px 0 100px;
+}
+
+hr {
+  border-top: 1px solid #ffffff;
 }
