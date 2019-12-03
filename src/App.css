@@ -12,8 +12,11 @@ h1 {
   max-width: 450px;
   padding: 10px;
   border-radius: 20px;
-
-  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.5270483193277311) 0%,
+    rgba(116, 198, 241, 1) 100%
+  );
 }
 
 .weather-icon {
