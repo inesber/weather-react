@@ -1,6 +1,6 @@
 h1 {
   text-align: center;
-  font-family: "Varela Round", sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   padding: 10px;
   font-size: 50px;
   text-transform: capitalize;
@@ -8,8 +8,8 @@ h1 {
 
 .weather-app {
   border: 1px solid #dadde1;
-  margin: 60px auto;
-  max-width: 550px;
+  margin: 25px auto;
+  max-width: 450px;
   padding: 10px;
   border-radius: 20px;
 
@@ -26,12 +26,16 @@ h1 {
 .weather-quote {
   text-align: center;
   font-size: 30px;
-  font-family: "Satisfy", cursive;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.WeatherTemperature {
+  text-align: right;
 }
 
 .current-temperature {
   font-size: 80px;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .unit {
@@ -39,25 +43,23 @@ h1 {
   position: relative;
   top: -50px;
   left: -15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 li {
   list-style: none;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .day-and-time li {
-  padding: 5px;
   font-size: 20px;
-  line-height: 19px;
+  line-height: 25px;
   text-align: center;
 }
 
 .wind-and-precipitation {
   padding: 10px;
   text-align: center;
-  display: block;
-  margin: 0 auto;
 }
 
 .wind-and-precipitation li {
@@ -88,4 +90,9 @@ form {
 
 p {
   padding: 7px;
+}
+
+footer {
+  text-align: center;
+  margin: 20px;
 }
