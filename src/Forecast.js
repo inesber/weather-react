@@ -7,7 +7,7 @@ export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
   function handleResponse(response) {
-    setForecast(response.data.list.slice(0, 5));
+    setForecast(response.data);
     setLoaded(true);
   }
 
@@ -24,18 +24,21 @@ export default function Forecast(props) {
     return `${hours}:${minutes}`;
   }
 
-  if (loaded) {
+  if (loaded && forecast.city.name === props.city) {
     return (
-      <div className="Forecast row">
-        {forecast.map(function(weather) {
-          return (
-            <div classname="col">
-              {formatHours(new Date(weather.dt * 1000))}
-              <WeatherIcon code={weather.weather[0].icon} />
-              {Math.round(weather.main.temp)}ºC
-            </div>
-          );
-        })}
+      <div className="ForecastHeader">
+        <p>In the next hours:</p>
+        <div className="Forecast row">
+          {forecast.list.slice(0, 5).map(function(weather) {
+            return (
+              <div classname="col">
+                {formatHours(new Date(weather.dt * 1000))}
+                <WeatherIcon code={weather.weather[0].icon} />
+                {Math.round(weather.main.temp)}ºC
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   } else {
